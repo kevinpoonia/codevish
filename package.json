@@ -1,0 +1,15 @@
+{
+  "name": "codevish-project",
+  "version": "1.0.0",
+  "description": "All your IT Solution in one place",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'No build step'",
+    "start": "echo 'No start script'"
+  },
+  "dependencies": {
+    "@netlify/neon": "^1.6.0"
+  },
+  "author": "CodeVish",
+  "license": "MIT"
+}
