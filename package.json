@@ -8,8 +8,11 @@
     "start": "echo 'No start script'"
   },
   "dependencies": {
-    "@netlify/neon": "^1.6.0"
+  "@netlify/neon": "^1.5.0"
+
+
   },
   "author": "CodeVish",
   "license": "MIT"
 }
+
