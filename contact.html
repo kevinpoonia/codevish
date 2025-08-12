@@ -19,6 +19,33 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
+	<script>
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  const formData = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    subject: document.getElementById('subject').value,
+    message: document.getElementById('message').value
+  };
+
+  const res = await fetch('/.netlify/functions/save-enquiry', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(formData)
+  });
+
+  const data = await res.json();
+  if (data.success) {
+    alert('Your message has been sent successfully!');
+    this.reset();
+  } else {
+    alert('Something went wrong: ' + (data.error || 'Unknown error'));
+  }
+});
+</script>
+
 <body>
 	<div class="wrap">
 		<div class="container">
